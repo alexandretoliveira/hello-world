@@ -17,3 +17,8 @@ babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
 
 -start live-server
 live-server public
+
+
+- visual studio code
+install Babel ES6/ES7 extension
+install Path Intellisense extension
