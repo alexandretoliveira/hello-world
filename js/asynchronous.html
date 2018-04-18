@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Asynchronous JavaScript</title>
+</head>
+<body>
+    <h1>Asynchronous JavaScript</h1>
+    <script>
+        /*
+        const second = () => {
+            setTimeout(() => { //asynchronous function from WEB API
+                console.log('Async Hey there');
+            }, 2000)
+        }
+
+        const first = () => {
+            console.log('Hey there');
+            second();
+            console.log('The end');
+        }
+
+        first();
+        */
+
+        /* //CallBack Hell
+       function getRecipe(){
+
+        setTimeout(() => {
+            const recipeID = [523,883,432,974]
+            console.log(recipeID);
+
+            setTimeout((id) => {
+                const recipe = {
+                    title: 'fresh tomato pasta',
+                    publisher: 'jonas'
+                }
+                console.log(`${id}: ${recipe.title}`);
+
+                setTimeout(publisher => {
+                    const recipe2 = {
+                        title: 'Italina pizza',
+                        publisher: 'jonas'
+                    }
+                    console.log(recipe);
+                },1500, recipe.publisher);
+            }, 1000, recipeID[2]);
+
+        }, 1500);
+       }
+
+       getRecipe();
+       */
+
+        // Promises
+        const getIDs = new Promise((resolve, reject) => {
+          setTimeout(() => {
+                resolve([523,883,432,974]); // or reject();
+          }, 1500);
+        });
+
+
+        const getRecipe = recID => {
+          return new Promise((resolve, reject) => {
+            setTimeout(ID => {
+                const recipe = {
+                    title: 'fresh tomato pasta',
+                    publisher: 'jonas'
+                }
+                resolve(recipe);
+            }, 1500, recID);
+          });
+        };
+
+        const getRelated = publisher => {
+          return new Promise((resolve, reject) => {
+              setTimeout(pub =>{
+                const recipe = {
+                        title: 'Italina pizza',
+                        publisher: 'Jonas'
+                    };
+                //resolve(`${recipe.publisher}: ${recipe.title}`);
+                resolve(recipe);
+              },1500, publisher);
+          });
+        };
+
+        getIDs
+        .then(IDs => {
+          console.log(IDs);
+          return getRecipe(IDs[2]);
+        })
+        .then(recipe => {
+          console.log(recipe);
+          return getRelated(recipe.publisher);
+        })
+        .then(recipe => {
+          console.log(recipe);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+
+
+        //Async Wait
+        async function getRecipesAW(){
+            const IDs = await getIDs;
+            console.log(IDs);
+            const recipe = await getRecipe(IDs[2]);
+            console.log(recipe);
+            const related = await getRelated(recipe.publisher);
+            console.log(related);
+
+        //    return recipe;
+        }
+        
+        getRecipesAW();
+        
+        //if return a value it will return a promise
+        //getRecipesAW().then(result => console.log(result));
+
+      
+
+      
+
+        
+    </script>
+</body>
+</html>
