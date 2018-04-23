@@ -2,4 +2,22 @@
 # npm init
 
 # npm install webpack --save-dev
+# npm install webpack-cli --save-dev
+# npm install webpack-dev-server --save-dev
+# npm install html-webpack-plugin --save-dev
+# npm install babel-core babel-preset-env babel-loader --save-dev
+# npm install babel-polyfill --save
 # npm install jquery --save
+
+// to install the node_modules //dependences (it will read package.json)
+# npm install
+
+# npm install jquery --save
+
+# npm install live-server --global
+
+# live-server public 
+
+# npm run dev
+# npm run build
+# npm run start
