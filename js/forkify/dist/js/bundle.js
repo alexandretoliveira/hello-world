@@ -3768,18 +3768,18 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n// Global app controller\n\nvar x = 23;\nconsole.log('App has started');\nconsole.log('' + x);\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("\n\n// Global app controller\n\nvar getResults = function () {\n    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(query) {\n        var key;\n        return regeneratorRuntime.wrap(function _callee$(_context) {\n            while (1) {\n                switch (_context.prev = _context.next) {\n                    case 0:\n                        key = '462b1cc8d4f2730081462fbc65136320';\n                        //   const res = await fetch(`http://food2fork.com/api/search?key=${key}&q=${query}`);\n                        //  console.log(res);\n\n                        console.log('passou');\n\n                    case 2:\n                    case 'end':\n                        return _context.stop();\n                }\n            }\n        }, _callee, this);\n    }));\n\n    return function getResults(_x) {\n        return _ref.apply(this, arguments);\n    };\n}();\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); }); }; }\n\ngetResults('Closet Cooking');\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
 /***/ 0:
 /*!**********************************************!*\
-  !*** multi ./src/js/index.js babel-polyfill ***!
+  !*** multi babel-polyfill ./src/js/index.js ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./src/js/index.js */\"./src/js/index.js\");\nmodule.exports = __webpack_require__(/*! babel-polyfill */\"./node_modules/babel-polyfill/lib/index.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/index.js_babel-polyfill?");
+eval("__webpack_require__(/*! babel-polyfill */\"./node_modules/babel-polyfill/lib/index.js\");\nmodule.exports = __webpack_require__(/*! ./src/js/index.js */\"./src/js/index.js\");\n\n\n//# sourceURL=webpack:///multi_babel-polyfill_./src/js/index.js?");
 
 /***/ })
 
