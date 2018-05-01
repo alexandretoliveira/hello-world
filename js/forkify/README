@@ -7,6 +7,8 @@
 # npm install html-webpack-plugin --save-dev
 # npm install babel-core babel-preset-env babel-loader --save-dev
 # npm install babel-polyfill --save
+# npm install fractional --save
+# npm install uniqid --save
 # npm install jquery --save
 
 // to install the node_modules //dependences (it will read package.json)
