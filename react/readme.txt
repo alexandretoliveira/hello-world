@@ -4,19 +4,31 @@
 npm install -g yarn
 
 -Install live-server
-npm install -g live-server
+yarn add live-server
 
 -Install babel
-npm install -g babel-cli@6.24.1
+yarn add babel-cli@6.24.1
 yarn init
 yarn add babel-preset-react@6.24.1 babel-preset-env@1.5.2
 
+-Install react
+yarn add react@16.0.0 react-dom@16.0.0
 
 -start babel to translate JSX to ES5:
 babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
 
+-webpack
+yarn add webpack
+yarn add babel-core@6.25.0 babel-loader@7.1.1
+
 -start live-server
 live-server public
+yarn run server
+yarn run build
+
+-Remove global dependences
+yarn global remove babel-cli live-server
+npm unistall -g babel-cli live-server
 
 
 - visual studio code
