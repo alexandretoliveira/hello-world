@@ -10,6 +10,7 @@ yarn add live-server
 yarn add babel-cli@6.24.1
 yarn init
 yarn add babel-preset-react@6.24.1 babel-preset-env@1.5.2
+yarn add babel-plugin-transform-class-properties
 
 -Install react
 yarn add react@16.0.0 react-dom@16.0.0
@@ -20,11 +21,13 @@ babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
 -webpack
 yarn add webpack
 yarn add babel-core@6.25.0 babel-loader@7.1.1
+yarn add webpack-dev-server
 
 -start live-server
 live-server public
 yarn run server
 yarn run build
+yarn run dev-server
 
 -Remove global dependences
 yarn global remove babel-cli live-server
