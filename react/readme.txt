@@ -23,6 +23,8 @@ yarn add webpack
 yarn add babel-core@6.25.0 babel-loader@7.1.1
 yarn add webpack-dev-server
 
+yarn add react-modal
+
 -start live-server
 live-server public
 yarn run server
