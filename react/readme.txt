@@ -46,3 +46,10 @@ npm unistall -g babel-cli live-server
 - visual studio code
 install Babel ES6/ES7 extension
 install Path Intellisense extension
+
+
+-React router
+yarn add react-router-dom
+
+-Redux
+yarn add redux
